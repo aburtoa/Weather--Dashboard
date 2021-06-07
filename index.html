@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weather dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    
+    
+    <header><h1>Weather dashboard</h1></header>
+</head>
+
+<body>
+   
+   <!-- Beginning of jumbotron  -->
+            <div class="container"></div>
+            <div class="row">
+              <div class="col-1 m-1 "></div>
+              <h2>Search for a City:</h2>
+              <div class="col-auto">
+              <input type="citysrch" class="form-control" id="inputPassword2" placeholder=""></div>
+              <div class="col-auto">
+               <n><button type="submit" class="btn btn-primary mb-3">Search</button></div>      
+
+                <!--start of cities history-->
+                <div class="card" style="width: 15rem;">
+                  <ul id="city-list"class="list-group-item list-group-item-primary"></ul>
+                   <!--START row 1  -->
+                   <var class="col 6 m 3"></var>
+                   <var class="card">
+                     <var id="local weather" class="card-body">
+                   </var>
+
+                   <!--START row 2-->
+                   <div class="card" style="width: 15rem;">
+                    <ul id="city-list"class="list-group-item list-group-item-primary"></ul>
+                     <!--START row 1  -->
+                     <var class="col 6 m 3"></var>
+                     <var class="card">
+                       <var id="local weather" class="card-body">
+                     </var>
+                     <!-- Beginning of row 2 in col 2 -->
+        <br>
+        <div class="row-12">
+         <div> <h3>5-Day Forecast:</h3></div class="col-1 m-1 "></div>
+        
+        <!-- Beginning of row 3 in col 2 -->
+        <br>
+        <div id ="boxes" class="row">
+          
+        </div>
+                   </var>
+                  </ul>
+                </div>
+              </div>           
+
+    
+  </div>
+</div>
+
+           
+      </div>
+        
+
+    <script src="script.js"></script>      
+</body>
+</html>
