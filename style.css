@@ -1,26 +1,18 @@
-button{
-    box-sizing: border-box;
+ion-icon {
+    color:white;
+    --ionicon-stroke-width:70px;
   }
-
-header {
   
-    background-color:dodgerblue;
-    color: orange;
-    text-align: center;
-    font-family: 'Faster One', cursive;
-    
-}
-.row-12{
-    color:darkcyan;
-    text-align: right;
-    align-content: center;
-   border: 1px solid gray;
-    padding:150px;
-    text-align: center;
-    text-transform: uppercase;
-    color: #4CAF50;
-    width: 450px;
-}
+  .green{
+  background-color: green;
+  }
+  .yellow{
+  background-color: yellow;
+  }
+  
+  .red{
+  background-color: red;
+  }
 
 
 
