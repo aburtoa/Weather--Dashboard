@@ -1,80 +1,71 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
+  <head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <!-- Link to css  -->
+    <link rel="stylesheet" type="text/css" href="./style.css">
 
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <script src="https://kit.fontawesome.com/efd9680f52.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
+    
+    <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.js"></script>
+    
+    <title>Weather Dashboard</title>
+  </head>
+  <body>
 
-    <title> Weather Dashboard</title>
-</head>
-
-<body>
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-
-  <!-- Header -->
-  <nav class="navbar navbar-expand-lg navbar-dar bg-dark" id="header">
-    <span class="navbar-brand mx-auto">Weather Dashboard</span>
-  </nav>  
-  <!-- Overall page contain -->
-  <div class='container'>
-    <div class='row'>
-
-      
-
-        
-          
-          <div class='col-3 m-2 bg-light'>
-            <label>Search For a City:</label>            
-            <div class="input-group mb-3">
-              <!-- Input box with "" placeholder -->
-              <input id="text" type="text" class="form-control" placeholder="city">
-                <div class="input-group-append">
-                  <!-- search button using primaryr -->
-                  <button id='getEnteredCityWeather' class="btn btn-primary" type="submit">
-                    <i id='add-cities' class="btn btn-outline-secondary bg-primary" type="button"></ion-icon></button>
-                </div>
-              </div>
-              <!-- Historyical Cities Formated Dynamically in Javascript -->
-              <div class="card" style="width: 15rem;">
-            <ul id="city-list" class="list-group list-group-flush"> </ul>
+    
+   <div class="container">
+     <!-- Beginning of jumbotron  -->
+    <div class=" jumbotron-fluid bg-dark text-white text-center">
+      <div class="container">
+        <h1 class="display-4 ">Weather Dashboard</h1>
+      </div>
+    </div>
+   
+    <div class="row">
+      <!-- column 1 of1 -->
+      <div class="col-3 m-2 bg-light">
+        <h3>Search for a City:</h3> 
+        <div class="input-group mb-2">
+          <input type="text" class="form-control" id="city-input" aria-describedby="basic-addon2">
+          <div class="input-group-append">
+            <button id ="add-city" class="btn btn-outline-secondary bg-primary" type="button"><ion-icon name="search-outline"></ion-icon> </button>
           </div>
         </div>
+        <!-- history of cities -->
+        <div class="card" style="width: 15rem;">
+          <ul id="city-list" class="list-group list-group-flush">
+           
+          </ul>
+        </div>
       </div>
-      '
-      <div class='col-md-9 '>
-        <div class='row 12'>
-          <div class='card'>
-            <div  id="current weather" class=" card-body">
-              <!-- City name loaded dynamically in javascript -->
-              <h5 class='card-title' id='cityName'>City</h5>
-              <ul>
-                 <!-- Weather values -->
-                <li><img id='currWeathIcn'></img></li>
-                <li class='card-text' id='currTemp'>Temp:</li>
-                <li class='card-text' id='currHum'>Humidity:</li>
-                <li class='card-text' id='currWind'>Windspeed:</li>
-                <li class='card-text' id='currUVI'>UV Index:</li>
-              </ul>
+      <!-- Beginning of col 2 in rwo 1 -->
+      <div class="col-8 m-2">
+        <!-- column 2 of 1-->
+        <div class="row-12">
+          <div class="card">
+            <div id="today-weather" class="card-body">
+             
             </div>
           </div>
-      </div>
-      <!-- Five day history cards -->
-      <div class='row-12'>
-          <!-- header for 5 day forecast Container -->
-          <h3 class='card-title'>5-Day Forcast</h3>
-      </div>
-      <!-- 5 day forecast loaded dynamically in Javascript -->
-      <div class='row' id='boxes'></div>
-    </div>
-  </div>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-  <script src='./script.js'></script>
-</body>
+        </div>
+        <!-- olumn 2 0f 2 -->
+        <br>
+        <div class="row-12">
+          <h3>5-Day Forecast:</h3>
+        </div>
+        
+        <br>
+        <div id ="boxes" class="row">
+         
+          <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
 </html>
